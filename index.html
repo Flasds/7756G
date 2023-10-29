@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>7756G</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        #header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+        }
+
+        #options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .option {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        #chatroom, #meetingroom {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>7756G</h1>
+        <p>JINGZE!!!!!NB!!!!!</p>
+    </div>
+
+    <div id="options">
+        <div class="option" id="chat">
+            聊天室 <input type="text" id="chatInput" placeholder="输入框"> <button onclick="joinChatRoom()">进入</button>
+        </div>
+        <div class="option" id="meeting">
+            会议室 <input type="text" id="meetingInput" placeholder="输入框"> <button onclick="joinMeetingRoom()">进入</button>
+        </div>
+        <div class="option" id="announcement" onclick="goToAnnouncement()">公告</div>
+        <div class="option" id="namelist" onclick="goToNameList()">人名单</div>
+        <div class="option" id="score" onclick="goToScore()">赛程成绩</div>
+    </div>
+
+    <script>
+        function joinChatRoom() {
+            const chatInput = document.getElementById("chatInput");
+            const roomName = chatInput.value;
+            window.location.href = `https://hack.chat/?${roomName}`;
+        }
+
+        function joinMeetingRoom() {
+            const meetingInput = document.getElementById("meetingInput");
+            const roomName = meetingInput.value;
+            window.location.href = `https://chat.cwy666.eu.org/${roomName}`;
+        }
+
+        function goToAnnouncement() {
+            window.location.href = "https://note.ms/gonggaoxiang";
+        }
+
+        function goToNameList() {
+            window.location.href = "https://note.ms/7756G";
+        }
+
+        function goToScore() {
+            window.location.href = "https://note.ms/score7756G";
+        }
+    </script>
+</body>
+</html>
